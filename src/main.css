@@ -1,3 +1,6 @@
+body {
+    background: #f5f5f5;
+}
 .hide { display: none }
 .header {
     position: fixed;
@@ -57,4 +60,10 @@
 .main {
     margin-top: 82px;
     padding: 20px;
+}
+.footer {
+    color: #606060;
+    text-align: center;
+    line-height: 30px;
+    margin: 20px 0;
 }

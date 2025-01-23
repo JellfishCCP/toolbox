@@ -1,0 +1,77 @@
+.tool {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tool > * {
+    width: 50%;
+}
+.tool > .panel {
+    padding: 20px;
+    border-right: 1px #ececec solid;
+}
+.tool > .panel .item {
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.tool > .panel .item > * {
+    box-sizing: border-box;
+}
+.tool > .panel > .second-layer {
+    border-left: 4px #ececec solid;
+    padding-left: 10px;
+}
+.tool > .panel .item > .selecter > button {
+    outline: none;
+    border: none;
+    padding: 7px 12px;
+    cursor: pointer;
+}
+.tool > .panel .item > .selecter {
+    width: calc(100% - 70px);
+}
+.tool > .panel .item > .selecter > input[type="color"] {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border-radius: 30px;
+    width: 50px;
+}
+.tool > .panel .item > .selecter > input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 7px 12px;
+    border-bottom: 1px #ececec solid;
+    width: 100%;
+}
+.tool > .panel > .item > .selecter > button.focus {
+    background: #0080ff;
+    color: white;
+}
+.tool > .panel .add {
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    background: #0080ff;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+.tool > .view {
+    padding: 20px;
+}
+.tool > .view > .defaultToDisplay {
+    text-align: center;
+    padding: 50px 0;
+    color: #606060;
+    line-height: 30px;
+    user-select: none;
+}

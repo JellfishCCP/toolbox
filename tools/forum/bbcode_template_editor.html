@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jellfish的工具箱—提供BBCode在线编辑、BBCode模板、我的世界UUID生成、我的世界皮肤在线预览等工具">
+    <meta name="keywords" content="Jellfish,工具箱,BBCode,UUID,皮肤,我的世界,Minecraft">
+    <title>Jellfish的工具箱</title>
+    <link rel="shortcut icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="stylesheet" type="text/css" href="../../src/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../src/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../src/main.css">
+    <link rel="stylesheet" type="text/css" href="../../src/harmony.css">
+
+    <!--Page Assets-->
+    <link rel="stylesheet" type="text/css" href="bbcode_template_editor.css">
+</head>
+<body>
+    <header class="header">
+        <div class="hint_bar">
+            <div class="hint_content">你猜我要说什么</div>
+            <div class="hint_close" onclick="hide_nint()" title="3天内不再提示">×</div>
+        </div>
+        <div class="nav_bar">
+            <div class="site_logo">
+                <img src="../../favicon.svg" alt="工具箱">
+                <span>Jellfish的工具箱</span>
+            </div>
+            <ul class="nav_list">
+                <li><a href="#">首页</a></li>
+                <li><a target="_blank" href="https://github.com/JellfishCCP/toolbox">Github</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main">
+        <div class="tool">
+            <div class="panel">
+                <div class="item" id="header">
+                    <div class="name">页头</div>
+                    <div class="selecter" id="header">
+                        <button class="focus">不显示</button>
+                        <button>四边边界</button>
+                        <button>下框边界</button>
+                        <button>上框边界</button>
+                        <button>上下框边界</button>
+                    </div>
+                </div>
+                <div class="second-layer hide" id="header_corr">
+                    <div class="item">
+                        <div class="name">主色调</div>
+                        <div class="selecter">
+                            <input type="color" value="#0080FF" id="header_color">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name">大标题</div>
+                        <div class="selecter">
+                            <input type="text" placeholder="大标题" id="header_title">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name">小标题</div>
+                        <div class="selecter">
+                            <input type="text" placeholder="小标题" id="header_subtitle">
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="main">
+                    <div class="name">正文</div>
+                    <div class="selecter">
+                        <button class="focus">不显示</button>
+                        <button>四周边界</button>
+                        <button>上框边界</button>
+                        <button>下框边界</button>
+                        <button>上下框边界</button>
+                    </div>
+                </div>
+                <div class="second-layer hide" id="main_corr">
+                    <div class="item">
+                        <div class="name">主色调</div>
+                        <div class="selecter">
+                            <input type="color" value="#0080FF" id="main_color">
+                        </div>
+                    </div>
+                    <div class="add" onclick="add()">＋</div>
+                    <div class="item">
+                        <div class="name">段落</div>
+                        <div class="selecter">
+                            <input type="text" placeholder="标题" class="main_p_t"><br/>
+                            <input type="text" placeholder="内容(建议随便填写随后在论坛中修改)" class="main_p_c">
+                        </div>
+                    </div>
+                </div>
+                <div class="item" id="footer">
+                    <div class="name">页尾</div>
+                    <div class="selecter">
+                        <button class="focus">不显示</button>
+                        <button>四周边界</button>
+                        <button>上框边界</button>
+                        <button>下框边界</button>
+                        <button>上下框边界</button>
+                    </div>
+                </div>
+                <div class="second-layer hide" id="footer_corr">
+                    <div class="item">
+                        <div class="name">主色调</div>
+                        <div class="selecter">
+                            <input type="color" value="#0080FF" id="footer_color">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="name">内容</div>
+                        <div class="selecter">
+                            <input type="text" placeholder="内容" id="footer_content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view">
+                <div class="defaultToDisplay">
+                    o(*￣▽￣*)ブ<br/>
+                    请在左侧工具栏操作，显示结果会实时显示在这里哦！
+                </div>
+                <div id="result"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div>@<script>document.write(new Date().getFullYear())</script> Jellfish</div>
+        <div>本网站与Mojang和Microsoft无任何从属关系</div>
+    </footer>
+</body>
+<script type="text/javascript" src="../../src/utils.js"></script>
+<script type="text/javascript" src="../../src/main.js"></script>
+<script type="text/javascript" src="bbcode_template_editor.js"></script>
+</html>

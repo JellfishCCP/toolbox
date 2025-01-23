@@ -19,7 +19,7 @@
 <body>
     <header class="header">
         <div class="hint_bar">
-            <div class="hint_content">联系作者：Jellfish_CCP<script>document.write("@")</script>qq.com</div>
+            <div class="hint_content">你猜我要说什么</div>
             <div class="hint_close" onclick="hide_nint()" title="3天内不再提示">×</div>
         </div>
         <div class="nav_bar">
@@ -29,7 +29,7 @@
             </div>
             <ul class="nav_list">
                 <li><a href="#">首页</a></li>
-                <li><a href="https://github.com/JellfishCCP/toolbox">Github</a></li>
+                <li><a target="_blank" href="https://github.com/JellfishCCP/toolbox">Github</a></li>
             </ul>
         </div>
     </header>
@@ -40,12 +40,55 @@
             </div>
             <h1 class="title">Jellfish的工具箱</h1>
             <h2 class="sub_title">现代的Minecraft及MC论坛工具箱</h2>
-            <div class="btns">
-                <button>Github</button>
-                <button>体验工具</button>
+            <div class="badges">
+                <img src="https://img.shields.io/github/license/JellfishCCP/toolbox">
+            </div>
+        </section>
+        <section class="tools_section">
+            <div class="title">论坛工具</div>
+            <div class="tool_list">
+                <a href="tools/forum/bbcode_template_editor.html">
+                    <div class="tool_item">
+                        <div class="title">BBCode模板编辑器</div>
+                        <div class="description">通过BBCode模板美化你在论坛中的帖子</div>
+                    </div>
+                </a>
+                <div class="tool_item">
+                    <div class="title">BBCode在线编辑器</div>
+                    <div class="description">在线编辑BBCode代码</div>
+                </div>
+                <div class="tool_item">
+                    <div class="title">Markdown转BBCode</div>
+                    <div class="description">将Markdown代码转为BBCode代码</div>
+                </div>
+            </div>
+        </section>
+        <section class="tools_section">
+            <div class="title">Minecraft工具</div>
+            <div class="tool_list">
+                <div class="tool_item">
+                    <div class="title">UUID生成</div>
+                    <div class="description">在线生成我的世界UUID</div>
+                </div>
+                <div class="tool_item">
+                    <div class="title">皮肤在线预览</div>
+                    <div class="description">在线预览我的世界皮肤</div>
+                </div>
+                <div class="tool_item">
+                    <div class="title">物品中英文对照表</div>
+                    <div class="description">Minecraft命令所用物品中英文对照表</div>
+                </div>
+                <div class="tool_item">
+                    <div class="title">命令在线生成</div>
+                    <div class="description">在线生成Minecraft命令</div>
+                </div>
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <div>@<script>document.write(new Date().getFullYear())</script> Jellfish</div>
+        <div>本网站与Mojang和Microsoft无任何从属关系</div>
+    </footer>
 </body>
 <script type="text/javascript" src="src/utils.js"></script>
 <script type="text/javascript" src="src/main.js"></script>
