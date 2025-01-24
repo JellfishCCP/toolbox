@@ -99,7 +99,6 @@ function renderFooter(mode = 0, color = "#FF6600", inner = "") {
     }
 }
 
-let lastRender = '';
 setInterval(function(){
     let headerEles, bodyEles, footerEles;
     headerEles = document.querySelectorAll('#header button');
@@ -132,16 +131,22 @@ setInterval(function(){
     result += renderHeader(corr.headerEles, headerColor.value, headerTitle.value, headerSubtitle.value);
     result += renderBody(corr.bodyEles, bodyColor.value, bodyContent);
     result += renderFooter(corr.footerEles, footerColor.value, footerContent.value);
-
-    if (result !== lastRender) {
-        lastRender = result;
-    }
     if (result !== "") {
         document.querySelector(".defaultToDisplay").setAttribute("style", "display: none");
+        document.querySelector(".copy").classList.remove('hide');
     }else{
         document.querySelector(".defaultToDisplay").setAttribute("style", "");
+        document.querySelector(".copy").classList.add('hide');
     }
     // if (result !== lastRender){
         document.querySelector("#result").innerHTML = result;
     
 }, 1000);
+
+document.querySelector(".copy-btn").addEventListener('click', function() {
+    navigator.clipboard.writeText(document.querySelector("#result").innerHTML);
+    this.innerText = "复制成功";
+    setTimeout(()=>{
+        this.innerText = "复制";
+    },1000);
+})

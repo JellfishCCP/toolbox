@@ -75,3 +75,16 @@
     line-height: 30px;
     user-select: none;
 }
+.copy {
+    margin: 20px 0;
+}
+.copy-btn {
+    padding: 7px 16px;
+    background: #0080ff;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
