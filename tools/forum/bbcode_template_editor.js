@@ -144,7 +144,7 @@ setInterval(function(){
 }, 1000);
 
 document.querySelector(".copy-btn").addEventListener('click', function() {
-    navigator.clipboard.writeText(document.querySelector("#result").innerHTML);
+    navigator.clipboard.writeText(document.querySelector("#result").innerHTML.split('<br/>').join('\n').split('<br>').join('\n'));
     this.innerText = "复制成功";
     setTimeout(()=>{
         this.innerText = "复制";
